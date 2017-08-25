@@ -1,0 +1,27 @@
+<!--account.wxml-->
+<view class="message">
+  <view class="message-item" bindtap="bindViewTap">
+    <view class="message-item-content message-item-avatar">头像</view>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>    
+  </view>
+  <view class="message-item">
+    <view class="message-item-content">姓名</view>
+    <view class="userinfo-nickname content-view">{{userInfo.nickName}}</view>
+    <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+  </view>
+  <view class="message-item" wx:if="{{userIden == 0}}">
+    <view class="message-item-content">身份</view>
+    <view class="content-view">学生</view>
+    <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+  </view>
+    <view class="message-item" wx:if="{{userIden == 1}}">
+    <view class="message-item-content">身份</view>
+    <view class="content-view">教师</view>
+    <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+  </view>
+    <view class="message-item" wx:if="{{userIden == 2}}">
+    <view class="message-item-content">身份</view>
+    <view class="content-view">管理员</view>
+    <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+  </view>
+</view>

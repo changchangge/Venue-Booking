@@ -1,0 +1,13 @@
+/* pages/classroom/classroom.wxss */
+.room-head {
+    border-bottom: 2rpx solid rgba(178, 178, 178, .2);
+}
+.list-item-left {
+  width: 440rpx;
+  float: left;
+}
+
+.list-item-right {
+  width: 240rpx;
+  float: right;
+}

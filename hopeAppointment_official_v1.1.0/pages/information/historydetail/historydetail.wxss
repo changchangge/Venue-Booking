@@ -1,0 +1,7 @@
+/* historydetail.wxss */
+.detail-head {
+  margin: 30rpx;
+}
+.list-items {
+  height: 60rpx;
+}

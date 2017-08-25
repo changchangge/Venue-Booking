@@ -1,0 +1,95 @@
+<!--time.wxml-->
+<view>
+  <view class="head">
+    <!--课室名称-->
+    <view class="title">{{classTitle}}</view>
+    <!--课室信息-->
+    <view class="list-items">
+      <image class="main-icon" src="../../pic/icon/map.png"></image>
+      <view>{{address}}</view>
+    </view>
+    <view class="list-items">
+      <image class="main-icon" src="../../pic/icon/phone.png"></image>
+      <view>{{phone}}</view>
+    </view>
+    <view class="list-items">
+      <image class="main-icon" src="../../pic/icon/people.png"></image>
+      <view>{{facility}}</view>
+    </view>
+    <view class="list-items">
+      <image class="main-icon" src="../../pic/icon/equip.png"></image>
+      <view>{{capacity}}</view>
+    </view>
+  </view>
+  <view class="message">
+    <!--批量预约-->
+    <view class="message-item" wx:if="{{userIden>0}}" checked="{{switchChecked}}">
+      <view class="message-item-content">批量预约</view>
+      <switch bindchange="switch1Change" />
+    </view>
+    <!--选择时间-->
+    <view class="message-item" id="choosetime" style="display: block" wx:if="{{!switchChecked}}">
+      <picker mode="date" value="{{date}}" start="{{date}}" end="{{maxdate}}" bindchange="bindDateChange">
+        <view class="message-item-content">选择日期</view>
+        <view class="content-view">{{date}}</view>
+        <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+      </picker>
+    </view>
+    <!--显示批量预约的按钮-->
+    <view id="multiorder" wx:if="{{switchChecked}}">
+      <view class="message-item">
+        <picker mode="date" value="{{startdate}}" start="{{date}}" end="{{maxdate1}}" bindchange="bindDateChange1">
+          <view class="message-item-content">开始日期</view>
+          <view class="content-view">{{startdate}}</view>
+          <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+        </picker>
+      </view>
+      <view class="message-item">
+        <picker mode="date" value="{{startdate}}" start="{{date}}" end="{{maxdate1}}" bindchange="bindDateChange2">
+          <view class="message-item-content">结束日期</view>
+          <view class="content-view">{{enddate}}</view>
+          <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+        </picker>
+      </view>
+      <view class="message-item">
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="message-item-content">选择频率</view>
+          <view class="content-view">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}}</view>
+          <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!-- 表单部分-->
+   <checkbox-group bindchange="checkboxChange">
+    <view class="service_selection">
+      <block wx:for="{{list}}">
+        <view class="item">
+          <label class="checkbox {{item.checked?'is_checked':''}}"> 
+              <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="false" />
+              <view class="info">{{item.class}}({{item.time}})</view>
+              <view class="box" wx:if="{{item.status !== -1}}">当前预约人数:{{item.status}}</view>
+              <view class="boxc" disabled="true" wx:if="{{item.status == -1}}">已被预约</view>
+          </label>
+        </view>
+      </block>
+    </view>
+  </checkbox-group>
+
+  <!--信息部分-->
+  <view class="message">
+    <view class="message-item message-item-first">
+      <view class="message-item-content">手机号</view>
+      <input type="number" confirm-type="next" maxlength="11" placeholder="请输入手机号" bindchange="tel"></input>
+    </view>
+    <view class="message-item">
+      <view class="message-item-content">单位</view>
+      <input type="text" confirm-type="next" maxlength="10" placeholder="请输入单位及申请人姓名" bindchange="department"></input>
+    </view>
+    <view class="message-item">
+      <view class="message-item-content">申请事由</view>
+      <input type="text" confirm-type="next" maxlength="15" placeholder="请输入申请事由" bindchange="reason"></input>
+    </view>
+  </view>
+  <button class="big-button" type="primary" bindtap="submit">提交</button>
+</view>

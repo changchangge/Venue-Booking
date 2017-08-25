@@ -1,0 +1,124 @@
+/**app.wxss**/
+
+/* reset */
+
+page {
+  background-color: rgba(178, 178, 178, 0.2);
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+  font-family: Helvetica Neue, -apple-system-font, Helvetica, sans-serif;
+}
+
+button {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+form {
+  width: 100%;
+}
+
+/* commonStyle */
+
+/* 建筑物等列表的样式 */
+.list {
+  display: block;
+  padding: 30rpx;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 2rpx solid rgba(178, 178, 178, 0.2);
+}
+.list-img {
+  display: block;
+  float: left;
+  width: 200rpx;
+  height: 200rpx;
+}
+.list-text {
+  display: block;
+  width: 460rpx;
+  float: right;
+}
+.list-title {
+  font-weight: bold;
+  padding-bottom: 8rpx;
+}
+.list-items {
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  margin: 6rpx 0;
+}
+.main-icon {
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  overflow: hidden;
+  padding-right: 20rpx;
+}
+
+/* 头部样式 */
+.head {
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+.head-img {
+  height: 340rpx;
+  width: 750rpx;
+}
+.head-others {
+  padding: 20rpx 30rpx;
+}
+.title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: bold;
+  padding-bottom: 16rpx;
+}
+
+/* 功能选择的样式 */
+.message {
+   font-size: 32rpx; 
+   margin: 0 0 20rpx 0;
+}
+
+.message-item {
+  padding: 0 30rpx;
+  height: 80rpx;
+  overflow: hidden;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 0.2);
+}
+
+.message-item-content {
+  /* background-color: #4a4a4a; */
+  display: block;
+  width: 180rpx;
+  float: left;
+  line-height: 80rpx;
+  text-align: center;
+}
+.content-view {
+  /* background-color: #4a4a4a; */
+  margin-left: 30rpx;
+  width: 300rpx;
+  float: left;
+  color: #b2b2b2;
+  line-height: 80rpx;
+  text-align: center;
+}
+.message-item-icon {
+  /* background-color: #4a4a4a; */
+  float: right;
+  height: 30rpx;
+  width: 30rpx;
+  padding: 25rpx 40rpx;
+}
+
+
+/* 点击按钮 */
+.big-button {
+  width: 690rpx;
+  margin: 80rpx auto;
+}
+

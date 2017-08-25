@@ -1,0 +1,30 @@
+<!--pretime.wxml-->
+<view>
+  <view class="head">
+    <image class="head-img" src="../../pic/cover.jpg"></image>
+  </view>
+  <view class="message">
+    <view class="message-item">
+      <picker mode="date" value="{{date}}" start="2017-08-01" end="2019-09-01" bindchange="bindPickerChange">
+        <view class="message-item-content">选择时间</view>
+        <view class="content-view">{{date}}</view>
+        <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+      </picker>
+    </view>
+    <view class="message-item">
+      <picker mode="multiSelector" value="{{detail}}" range="{{capacity}}" bindchange="bindCapacityChange" bindcolumnchange="bindCapacityColumnChange">
+        <view class="message-item-content">选择人数</view>
+        <view class="content-view">{{capacity[0][peoplenumber[0]]}} -- {{capacity[1][peoplenumber[1]]}}</view>
+        <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+      </picker>
+    </view>
+    <view class="message-item">
+      <picker mode="selector" value="{{name}}" range="{{buildings}}" range-key="{{'building_name'}}" id="{{item.building_id}}" bindchange="bindBuildingChange">
+        <view class="message-item-content">选择建筑</view>
+         <view class="content-view">{{buildings[name].building_name}}</view> 
+        <image class="message-item-icon" src="../../../pic/icon/arrowright.png"></image>
+      </picker>
+    </view>
+  </view>
+  <button class="big-button" type="primary" bindtap="toNextPage">开始查找</button>
+</view>

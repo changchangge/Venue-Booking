@@ -1,0 +1,61 @@
+/* time.wxss */
+
+.head {
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 0.2);
+}
+
+.list-items {
+  height: 60rpx;
+}
+ 
+.message-item-first {
+  border-top: 2rpx solid rgba(178, 178, 178, 0.2);
+} 
+switch {
+  float: right;
+  line-height: 80rpx;
+}
+.service_selection {
+  display: flex;
+  margin: 40rpx 30rpx;
+  flex-direction: column;
+  border-left: 2rpx solid rgba(178, 178, 178, 0.6);
+}
+
+.checkbox {
+  display: flex;
+  height: 72rpx;
+  border-bottom: 2rpx solid rgba(178, 178, 178, 0.6);
+}
+.item:first-child {
+  border-top: 2rpx solid rgba(178, 178, 178, 0.6);
+}
+.info,.box,.boxc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2rpx solid rgba(178, 178, 178, 0.6);
+  background-color: rgba(255,255,255,.2)
+}
+.info {
+  width: 420rpx;
+}
+
+.box,.boxc {
+  width: 270rpx;
+}
+
+.boxc {
+  background-color: rgba(178, 178, 178, 0.4);
+}
+
+.service_selection .is_checked .box {
+  background-color: rgba(26,173,25,.6);
+}
+
+.message-item input {
+  float: right;
+  width: 460rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,16 @@
+/* account.wxss */
+.userinfo-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  float: right;
+  padding-right: 60rpx;  
+}
+
+.message-item:first-child {
+  margin-top: 60rpx;
+  height: 168rpx;
+}
+
+.message-item-avatar {
+  margin-top: 90rpx;
+}

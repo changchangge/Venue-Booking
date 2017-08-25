@@ -1,0 +1,23 @@
+<!--building.wxml-->
+<view wx:if="{{listhide}}">
+  <block wx:for="{{buildings}}" wx:key="id">
+      <view class="list" id="{{item.id}}" bindtap="toNextPage">
+        <image class="list-img" src="{{item.src}}" mode="{{item.mode}}"></image>
+        <view class="list-text">
+          <view class="list-title">{{item.name}}</view>
+          <view class="list-items">
+            <image class="main-icon" src="../../pic/icon/map.png"></image>
+            <view>{{item.address}}</view>
+          </view>
+          <view class="list-items">
+            <image class="main-icon" src="../../pic/icon/phone.png"></image>
+            <view>{{item.phone}}</view>
+          </view>
+          <view class="list-items">
+            <image class="main-icon" src="../../pic/icon/people.png"></image>
+            <view>{{item.capacity}}</view>
+          </view>
+        </view>
+      </view>
+  </block>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/classroom/classroom.wxml-->
+<view>
+  <view class="head room-head">
+    <image class="head-img" src="{{src}}"></image>
+    <view class="head-others">
+      <view class="title">{{name}}</view>
+      <view class="list-items list-item-left">
+        <image class="main-icon" src="../../pic/icon/map.png"></image>
+        <view>{{address}}</view>
+      </view>
+      <view class="list-items  list-item-right">
+        <image class="main-icon" src="../../pic/icon/phone.png"></image>
+        <view>{{phone}}</view>
+      </view>
+    </view>
+  </view>
+  <block wx:for="{{classrooms}}">
+    <view class="list" id="{{item.id}}" bindtap="toNextPage">
+      <image class="list-img" src="{{item.src}}"></image>
+      <view class="list-text">
+        <text class="list-title">{{item.name}}</text>
+        <view class="list-items">
+          <image class="main-icon" src="../../pic/icon/people.png"></image>
+          <view>{{item.capacity}}</view>
+        </view>
+        <view class="list-items">
+          <image class="main-icon" src="../../pic/icon/equip.png"></image>
+          <view>{{item.equip}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
