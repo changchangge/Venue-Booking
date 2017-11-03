@@ -1,0 +1,4 @@
+/* pretime.wxss */
+.message-item:first-child {
+  border-top: 2rpx solid rgba(178, 178, 178, 0.2);
+}

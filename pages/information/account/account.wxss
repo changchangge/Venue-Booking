@@ -1,0 +1,27 @@
+/* account.wxss */
+.avatar {
+   font-size: 32rpx; 
+   margin: 30rpx 0;
+}
+
+.avatar {
+  padding: 0 30rpx;
+  height: 120rpx;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.avatar-text {
+  display: block;
+  width: 180rpx;
+  float: left;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.avatar-pic {
+  float: right;
+  height: 100rpx;
+  width: 100rpx;
+  padding: 10rpx 40rpx;
+}

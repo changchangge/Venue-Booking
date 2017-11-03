@@ -1,0 +1,13 @@
+/* about.wxss */
+
+.userinfo-logo {
+  width: 240rpx;
+  height: 240rpx;
+  display: block;
+  margin: 40rpx auto;
+}
+
+.message-item:first-child {
+  border-top: 2rpx solid rgba(178,178,178,.2); 
+  margin-top: 60rpx;
+}
